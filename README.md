@@ -7,10 +7,10 @@ This side channel attack is based on the number of multiplications used in calcu
 
 <hr>
 
-Some example values are used here for the generator (g), prime (p), and encryptions (g^a mod p, g^b mod p).
+Some example values are used here for the generator `g`, prime `p`, and encryptions `g^a mod p`, `g^b mod p`.
 
-The number of multiplications (n) is given.  In the wild, n would be estimated by timing each communication.  
-During periods of rapid communications between points, the pool of values to determine n can increase.
+The number of multiplications `n` is given.  In the wild, `n` would be estimated by timing each communication.  
+During periods of rapid communications between points, the pool of values to determine `n` can increase.
 
 Timing attack resistant systems employ methods to obscure information about decryption times for calculation of messages.
 
@@ -48,5 +48,11 @@ The example values allow for successful cryptanalysis within a practical number 
 `number of iterations to recover key  196418`
 
 `mint-vm-mate@mintvmmate-VirtualBox ~/Desktop/crypto $ `
+
+<hr>
+
+Now that you know something about cryptography, try deciphering this:
+
+![Hidden Message](http://i.imgur.com/xjs9F9a.jpg)
 
 
