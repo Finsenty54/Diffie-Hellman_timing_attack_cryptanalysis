@@ -1,4 +1,4 @@
-# Based on a cryptography program written for Udacity coursework
+# Based on a cryptography program written for a Udacity project
 
 # Produces private key and decrypts message.  
 # Based on counting binary 1's and 0's multiplication used in calculating key.  
