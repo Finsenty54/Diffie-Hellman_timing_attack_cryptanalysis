@@ -52,11 +52,8 @@ n_multiplications = 26
 
 ############################
 # This eliminates the recursion in the mod_exp
-# shown in lecture
-# and does bitwise operations
-# to speed things up a bit
-# but the number of multiplications stays
-# the same
+# and does bitwise operations to speed things up a bit
+# but the number of multiplications stays the same
 def mod_exp(a, b, q):
     """return a**b % q"""
     val = 1
