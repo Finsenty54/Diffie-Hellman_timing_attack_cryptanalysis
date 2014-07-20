@@ -20,7 +20,7 @@ For the purposes of this example, all of the public information of a Diffie-Hell
 where `a` is Alice's private key and `b` is Bob's private key.
 This information should be enough to determine Alice's private key and then decrypt the message.  The Python methods referred to here are available for review on the relevant Github. 
 
-The method `count_multiplications()` can be used to match a combination against the value of n, in order to slim down the possible combinations.  However, an interesting point here is that simply knowing the value of `n` could lead to a break, even without weeding out irrelevant values.  While this sounds inefficient for cryptanalysis purposes (and of course it is inefficient), it shows how dangerous the timing attack can be at small values, for example where `g^a%p` is roughly 100 bits (or less) as in this case.  Therefore, the method `find_candidate()` is included to illustrate this point.
+The method `count_multiplications()` can be used to match a combination against the value of n, in order to slim down the possible combinations.  However, an interesting point here is that using a generator of itertools combinations for the possible values of `n` could lead to a break, even without weeding out values using a separate function to count (for example on an separate run of the program in consideration of resource usage).  While this sounds inefficient for cryptanalysis purposes, the combinations of `n` bitlength can be matched within a practical number of iterations, which shows how dangerous the timing attack can be at small values, for example where `g^a%p` is roughly 100 bits (or less) as in this case.  Therefore, the method `find_candidate()` is included to illustrate this point.
 
 <hr>
 
