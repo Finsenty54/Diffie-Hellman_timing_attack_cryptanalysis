@@ -218,7 +218,7 @@ def generate_possibilities(floor, roof):
             yield int(a + sum(2**one for one in some_ones))
         a = a / 2
 
-# should generate every number greater than lower for which count_multiplications returns the same value as upper
+# should generate between floor and roof where the binary multiplications match n_multiplications
 
 def find_possibility():
     result = []
@@ -229,7 +229,7 @@ def find_possibility():
 
 a = find_possibility()[0]
 
-# key = g_b**a  ## this is too slow, use pow()
+# key = g_b**a  ## too slow, use pow()
 
 key = pow(g_b, a, p)  ## pow() handles the larger numbers better
 
