@@ -207,28 +207,27 @@ for i in range(int(math.ceil(ceiling))):
 
 
 import math
-import itertools as it
+import itertools as iter
 
-def generate_candidates(lower, upper):
-    a = upper
-    max_length = int(math.log(upper, 2))
-    while a > lower:
+def generate_possibilities(floor, roof):
+    a = roof; max_length = int(math.log(roof, 2))
+    while a > floor:
         log = int(math.log(a, 2))
         ones = max_length - log
-        for some_ones in it.combinations(range(log), ones):
+        for some_ones in iter.combinations(range(log), ones):
             yield int(a + sum(2**one for one in some_ones))
         a = a / 2
 
 # should generate every number greater than lower for which count_multiplications returns the same value as upper
 
-def find_candidate():
-    c = []
-    for candidate in generate_candidates(2, 2**26):
-        if pow(g, candidate, p) == g_a:
-            c.append(candidate)
-    return c
+def find_possibility():
+    result = []
+    for possibility in generate_possibilities(2, 2**26):
+        if pow(g, possibility, p) == g_a:
+            result.append(possibility)
+    return result
 
-a = find_candidate()[0]
+a = find_possibility()[0]
 
 # key = g_b**a  ## this is too slow, use pow()
 
